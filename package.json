@@ -1,0 +1,24 @@
+{
+  "name": "stitch_bem_benk_forklift_landing_page-(1)",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/semongkoff-creator/bembenklampung.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/semongkoff-creator/bembenklampung/issues"
+  },
+  "homepage": "https://github.com/semongkoff-creator/bembenklampung#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  }
+}
