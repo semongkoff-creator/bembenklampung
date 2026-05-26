@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bembenkporkliflampungcom.vercel.app/sitemap.xml
