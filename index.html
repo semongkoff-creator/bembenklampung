@@ -446,10 +446,14 @@
 </div>
 <div class="bg-surface rounded-xl p-8 border border-outline shadow-sm">
 <h3 class="font-headline-md mb-6">Kirim Pesan</h3>
-<form class="space-y-4">
-<input class="w-full p-4 rounded-lg bg-surface-container-low border-2 border-outline-variant focus:border-primary outline-none transition-colors" placeholder="Nama Lengkap" type="text"/>
-<input class="w-full p-4 rounded-lg bg-surface-container-low border-2 border-outline-variant focus:border-primary outline-none transition-colors" placeholder="Alamat Email" type="email"/>
-<textarea class="w-full p-4 rounded-lg bg-surface-container-low border-2 border-outline-variant focus:border-primary outline-none transition-colors" placeholder="Pesan Anda" rows="4"></textarea>
+<form action="https://formsubmit.co/Bambangsupriyantoa@gmail.com" class="space-y-4" method="POST">
+<input name="_subject" type="hidden" value="Pesan Baru dari Website BEM-BENK FORKLIFT"/>
+<input name="_captcha" type="hidden" value="false"/>
+<input name="_template" type="hidden" value="table"/>
+<input name="_next" type="hidden" value="https://semongkoff-creator.github.io/bembenklampung/"/>
+<input class="w-full p-4 rounded-lg bg-surface-container-low border-2 border-outline-variant focus:border-primary outline-none transition-colors" name="nama" placeholder="Nama Lengkap" required="" type="text"/>
+<input class="w-full p-4 rounded-lg bg-surface-container-low border-2 border-outline-variant focus:border-primary outline-none transition-colors" name="email" placeholder="Alamat Email" required="" type="email"/>
+<textarea class="w-full p-4 rounded-lg bg-surface-container-low border-2 border-outline-variant focus:border-primary outline-none transition-colors" name="pesan" placeholder="Pesan Anda" required="" rows="4"></textarea>
 <button class="w-full bg-inverse-surface text-white py-4 rounded-lg font-bold hover:bg-on-surface transition-colors" type="submit">KIRIM PESAN</button>
 </form>
 </div>
