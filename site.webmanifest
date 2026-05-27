@@ -1,0 +1,15 @@
+{
+  "name": "BEM-BENK FORKLIFT",
+  "short_name": "BEM-BENK",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f8f5ef",
+  "theme_color": "#c77f00",
+  "icons": [
+    {
+      "src": "/assets/images/favicon.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    }
+  ]
+}
