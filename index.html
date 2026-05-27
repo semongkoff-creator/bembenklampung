@@ -66,6 +66,13 @@
         section[id] {
             scroll-margin-top: 92px;
         }
+        .hero-slide {
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+        .hero-slide.is-active {
+            opacity: 1;
+        }
     </style>
 </head>
 <body class="bg-background text-on-background font-body-md overflow-x-hidden">
@@ -113,7 +120,9 @@
 <!-- Hero Section -->
 <section class="relative min-h-[100svh] md:h-[90vh] flex items-center overflow-hidden pt-24 pb-12 md:pt-0 md:pb-0">
 <div class="absolute inset-0 z-0">
-<img alt="Professional Forklift in Warehouse" class="w-full h-full object-cover" src="./assets/images/hero-forklift.jpg"/>
+<img alt="Armada forklift aktif di area warehouse" class="hero-slide is-active absolute inset-0 w-full h-full object-cover" src="./assets/images/hero-forklift.jpg"/>
+<img alt="Lokasi workshop dan bengkel BEM-BENK Forklift" class="hero-slide absolute inset-0 w-full h-full object-cover" src="./assets/images/hero-workshop.jpg"/>
+<img alt="Forklift hijau dan hitam dengan sudut low angle di area outdoor" class="hero-slide absolute inset-0 w-full h-full object-cover" src="./assets/images/gallery-5.jpg"/>
 <div class="absolute inset-0 bg-black/60"></div>
 </div>
 <div class="relative z-10 max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop text-white w-full">
@@ -563,6 +572,8 @@
         const mobileMenu = document.getElementById("mobile-menu");
         const galleryToggle = document.getElementById("gallery-toggle");
         const galleryExtras = document.querySelectorAll(".gallery-extra");
+        const heroSlides = document.querySelectorAll(".hero-slide");
+        let activeHeroSlide = 0;
 
         function setActiveNavLink(clickedLink) {
             navLinks.forEach((link) => {
@@ -609,6 +620,14 @@
                     ? '<span class="material-symbols-outlined" data-icon="expand_less">expand_less</span>Tutup Galeri Tambahan'
                     : '<span class="material-symbols-outlined" data-icon="photo_library">photo_library</span>Lihat Gambar Selengkapnya';
             });
+        }
+
+        if (heroSlides.length > 1) {
+            window.setInterval(function() {
+                heroSlides[activeHeroSlide].classList.remove("is-active");
+                activeHeroSlide = (activeHeroSlide + 1) % heroSlides.length;
+                heroSlides[activeHeroSlide].classList.add("is-active");
+            }, 4000);
         }
 
         function syncActiveNavOnScroll() {
