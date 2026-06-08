@@ -73,6 +73,92 @@
         .hero-slide.is-active {
             opacity: 1;
         }
+        .location-map-shell {
+            overflow: hidden;
+            border-radius: 0.75rem;
+            border: 1px solid #e5e7eb;
+            background: #ffffff;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+        }
+        .location-map-frame {
+            width: 100%;
+            height: 360px;
+            border: 0;
+            display: block;
+        }
+        .location-map-footer {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.75rem;
+            border-top: 1px solid #e5e7eb;
+            padding: 1rem 1.25rem;
+            background: #f8fafc;
+        }
+        .location-map-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            border-radius: 9999px;
+            background: #815500;
+            padding: 0.625rem 1rem;
+            font-weight: 700;
+            color: #ffffff;
+            transition: transform 0.3s ease;
+        }
+        .location-map-button:hover {
+            transform: scale(1.03);
+        }
+        .review-summary {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            border-radius: 9999px;
+            border: 1px solid #e5e7eb;
+            background: #ffffff;
+            padding: 0.75rem 1rem;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+        }
+        .review-avatar {
+            width: 3.5rem;
+            height: 3.5rem;
+            border-radius: 9999px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            font-size: 1.25rem;
+            font-weight: 700;
+            box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.16);
+        }
+        .review-meta {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 0.25rem;
+        }
+        .review-source {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            font-size: 0.875rem;
+            color: #5f6368;
+        }
+        .review-time-pill {
+            display: inline-flex;
+            align-items: center;
+            border-radius: 9999px;
+            border: 1px solid #e5e7eb;
+            padding: 0.125rem 0.5rem;
+            font-size: 0.6875rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: #514535;
+            background: #fff;
+        }
     </style>
 </head>
 <body class="bg-background text-on-background font-body-md overflow-x-hidden">
@@ -91,6 +177,7 @@
 <a class="nav-link font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#rental-options">Rental Options</a>
 <a class="nav-link font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#capacity">Capacity</a>
 <a class="nav-link font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#gallery">Gallery</a>
+<a class="nav-link font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#testimonials">Testimoni</a>
 <a class="nav-link font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#about">About Us</a>
 </div>
 <div class="flex items-center gap-4">
@@ -109,6 +196,7 @@
 <a class="nav-link text-on-surface font-bold" href="#rental-options">Rental Options</a>
 <a class="nav-link text-on-surface font-bold" href="#capacity">Capacity</a>
 <a class="nav-link text-on-surface font-bold" href="#gallery">Gallery</a>
+<a class="nav-link text-on-surface font-bold" href="#testimonials">Testimoni</a>
 <a class="nav-link text-on-surface font-bold" href="#about">About Us</a>
 <a class="inline-flex items-center justify-center gap-2 bg-primary-container text-on-primary-container px-5 py-3 rounded-xl font-bold shadow-sm" href="https://wa.me/6281369368231">
 <span class="material-symbols-outlined" data-icon="phone">phone</span>
@@ -417,6 +505,116 @@
 </div>
 </div>
 </section>
+<!-- Testimonials Section -->
+<section class="py-20 md:py-24 bg-surface-container-low reveal" id="testimonials">
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="text-center mb-14">
+<div class="inline-block px-4 py-1 bg-primary-container/20 text-primary font-bold rounded-full mb-6">TESTIMONI PELANGGAN</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">Ulasan dari Pelanggan Kami</h2>
+<div class="review-summary mx-auto">
+<div class="flex items-center gap-1 text-[#F4B400]">
+<span class="material-symbols-outlined text-base" data-icon="star">star</span>
+<span class="material-symbols-outlined text-base" data-icon="star">star</span>
+<span class="material-symbols-outlined text-base" data-icon="star">star</span>
+<span class="material-symbols-outlined text-base" data-icon="star">star</span>
+<span class="material-symbols-outlined text-base" data-icon="star">star</span>
+</div>
+<div class="text-left">
+<div class="text-sm font-bold text-on-surface">5,0 dari 5</div>
+<div class="text-xs text-on-surface-variant">Berdasarkan ulasan pelanggan</div>
+</div>
+</div>
+<p class="text-on-surface-variant max-w-2xl mx-auto mt-4">Ditata seperti Google Reviews agar tampak lebih rapi, mudah dipindai, dan nyaman dibaca di desktop maupun mobile.</p>
+</div>
+<div class="max-w-3xl mx-auto mb-8">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<span class="rounded-full bg-primary text-white px-4 py-2 text-sm font-semibold">Most relevant</span>
+<span class="rounded-full border border-outline-variant bg-white px-4 py-2 text-sm font-semibold text-on-surface-variant">Newest</span>
+<span class="rounded-full border border-outline-variant bg-white px-4 py-2 text-sm font-semibold text-on-surface-variant">Highest</span>
+<span class="rounded-full border border-outline-variant bg-white px-4 py-2 text-sm font-semibold text-on-surface-variant">Lowest</span>
+</div>
+</div>
+<div class="max-w-3xl mx-auto overflow-hidden rounded-2xl border border-outline-variant bg-white shadow-sm">
+<article class="border-b border-outline-variant p-6 md:p-8">
+<div class="flex items-start gap-4">
+<div class="review-avatar bg-[#2E7D32] shrink-0">H</div>
+<div class="min-w-0 flex-1">
+<div class="flex items-start justify-between gap-4">
+<div>
+<h3 class="font-headline-md text-headline-md">Hanafi Risman</h3>
+<div class="review-meta">
+<span class="review-source"><span class="material-symbols-outlined text-[18px]" data-icon="account_circle">account_circle</span>Google Review</span>
+<span class="review-time-pill">2 years ago</span>
+</div>
+</div>
+<span class="text-[#5f6368]">...</span>
+</div>
+<div class="flex items-center gap-2 mt-3 text-[#F4B400]">
+<span class="material-symbols-outlined text-base" data-icon="star">star</span>
+<span class="material-symbols-outlined text-base" data-icon="star">star</span>
+<span class="material-symbols-outlined text-base" data-icon="star">star</span>
+<span class="material-symbols-outlined text-base" data-icon="star">star</span>
+<span class="material-symbols-outlined text-base" data-icon="star">star</span>
+</div>
+<p class="mt-3 text-body-md text-on-surface-variant leading-relaxed">Pelayanannya cukup baik, dan timnya sigap menanggapi kendala yang ada di lapangan. Mantap!</p>
+</div>
+</div>
+</article>
+<article class="border-b border-outline-variant p-6 md:p-8">
+<div class="flex items-start gap-4">
+<div class="review-avatar bg-[#0097A7] shrink-0">M</div>
+<div class="min-w-0 flex-1">
+<div class="flex items-start justify-between gap-4">
+<div>
+<h3 class="font-headline-md text-headline-md">Mustofa Tofa</h3>
+<div class="review-meta">
+<span class="review-source"><span class="material-symbols-outlined text-[18px]" data-icon="account_circle">account_circle</span>Google Review</span>
+<span class="review-time-pill">2 hours ago</span>
+<span class="review-time-pill">NEW</span>
+</div>
+</div>
+<span class="text-[#5f6368]">...</span>
+</div>
+<div class="flex items-center gap-2 mt-3 text-[#F4B400]">
+<span class="material-symbols-outlined text-base" data-icon="star">star</span>
+<span class="material-symbols-outlined text-base" data-icon="star">star</span>
+<span class="material-symbols-outlined text-base" data-icon="star">star</span>
+<span class="material-symbols-outlined text-base" data-icon="star">star</span>
+<span class="material-symbols-outlined text-base" data-icon="star">star</span>
+</div>
+<p class="mt-3 text-body-md text-on-surface-variant leading-relaxed">Sewa forklift yg terpercaya, dan baguss</p>
+</div>
+</div>
+</article>
+<article class="p-6 md:p-8">
+<div class="flex items-start gap-4">
+<div class="review-avatar bg-[#E64A19] shrink-0">O</div>
+<div class="min-w-0 flex-1">
+<div class="flex items-start justify-between gap-4">
+<div>
+<h3 class="font-headline-md text-headline-md">Okti Parno</h3>
+<div class="review-meta">
+<span class="review-source"><span class="material-symbols-outlined text-[18px]" data-icon="account_circle">account_circle</span>Google Review</span>
+<span class="review-time-pill">2 hours ago</span>
+<span class="review-time-pill">NEW</span>
+</div>
+</div>
+<span class="text-[#5f6368]">...</span>
+</div>
+<div class="flex items-center gap-2 mt-3 text-[#F4B400]">
+<span class="material-symbols-outlined text-base" data-icon="star">star</span>
+<span class="material-symbols-outlined text-base" data-icon="star">star</span>
+<span class="material-symbols-outlined text-base" data-icon="star">star</span>
+<span class="material-symbols-outlined text-base" data-icon="star">star</span>
+<span class="material-symbols-outlined text-base" data-icon="star">star</span>
+</div>
+<p class="mt-3 text-body-md text-on-surface-variant leading-relaxed">Sewa alat berat yg amanah dan aman</p>
+</div>
+</div>
+</article>
+</div>
+</div>
+</section>
 <!-- About Section -->
 <section class="py-20 md:py-24 bg-surface reveal" id="about">
 <div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop text-center">
@@ -449,7 +647,7 @@
 <span class="material-symbols-outlined text-primary" data-icon="location_on">location_on</span>
 <div>
 <h5 class="font-bold">Lokasi</h5>
-<p class="text-on-surface-variant">Lampung, Indonesia</p>
+<p class="text-on-surface-variant">Jl. Selat Malaka V No. 30, Panjang Selatan, Bandar Lampung 35243</p>
 </div>
 </div>
 <div class="flex items-start gap-4">
@@ -473,6 +671,20 @@
 <p class="text-on-surface-variant">Senin - Sabtu: 08:00 - 18:00</p>
 <p class="text-on-surface-variant">Minggu: Tutup</p>
 </div>
+</div>
+</div>
+<div class="location-map-shell mt-8">
+<iframe class="location-map-frame" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Jl.%20Selat%20Malaka%20V%20No.%2030%2C%20Panjang%20Selatan%2C%20Bandar%20Lampung%2035243&amp;output=embed" title="Lokasi BEM-BENK FORKLIFT"></iframe>
+<div class="location-map-footer">
+<div>
+<div style="font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: #815500; font-weight: 700; margin-bottom: 0.25rem;">Lokasi Kami</div>
+<div style="font-size: 14px; font-weight: 700; color: #1a1c1c;">Jl. Selat Malaka V No. 30</div>
+<div style="font-size: 14px; color: #514535;">Panjang Selatan, Bandar Lampung 35243</div>
+</div>
+<a class="location-map-button" aria-label="Arahkan saya ke Google Maps" href="https://maps.app.goo.gl/cRSC9SNHVHCdpjvM9" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-base" data-icon="open_in_new">open_in_new</span>
+Arahkan Saya
+</a>
 </div>
 </div>
 </div>
@@ -524,7 +736,7 @@
 </div>
 </div>
 <div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop mt-12 pt-8 border-t border-on-secondary-fixed-variant/20 text-center">
-<p class="text-label-md text-on-secondary-fixed-variant">© 2026 BEM-BENK FORKLIFT. All rights reserved. Heavy-duty reliability.</p>
+<p class="text-label-md text-on-secondary-fixed-variant">&copy; 2026 BEM-BENK FORKLIFT. All rights reserved. Heavy-duty reliability.</p>
 </div>
 </footer>
 <!-- Floating WhatsApp Button -->
