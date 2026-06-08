@@ -162,10 +162,25 @@
         .contact-form-column {
             width: 100%;
         }
+        .contact-layout {
+            display: flex;
+            flex-direction: column;
+            gap: 3.5rem;
+            align-items: flex-start;
+        }
         @media (min-width: 1024px) {
+            .contact-layout {
+                display: grid;
+                grid-template-columns: minmax(0, 1fr) 520px;
+                gap: 4rem;
+                align-items: start;
+            }
             .contact-form-column {
-                flex: 0 0 520px;
+                width: 520px;
                 max-width: 520px;
+            }
+            .contact-form-card {
+                min-height: 520px;
             }
         }
     </style>
@@ -539,7 +554,7 @@
 <!-- Contact Section -->
 <section class="py-20 md:py-24 bg-surface-container-high reveal" id="contact">
 <div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
-<div class="flex flex-col lg:flex-row gap-14 lg:gap-16 items-start">
+<div class="contact-layout">
 <div class="w-full lg:flex-1">
 <h2 class="font-headline-lg text-headline-lg mb-8">Hubungi Kami</h2>
 <div class="space-y-6">
@@ -573,7 +588,7 @@
 </div>
 </div>
 </div>
-<div class="location-map-shell mt-12">
+<div class="location-map-shell mt-10">
 <iframe class="location-map-frame" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Jl.%20Selat%20Malaka%20V%20No.%2030%2C%20Panjang%20Selatan%2C%20Bandar%20Lampung%2035243&amp;output=embed" title="Lokasi BEM-BENK FORKLIFT"></iframe>
 <div class="location-map-footer">
 <div>
@@ -589,7 +604,7 @@ Arahkan Saya
 </div>
 </div>
 <div class="contact-form-column">
-<div class="bg-surface rounded-xl p-5 border border-outline shadow-sm h-fit">
+<div class="bg-surface rounded-xl p-5 border border-outline shadow-sm h-fit contact-form-card">
 <div class="rounded-lg bg-primary px-4 py-3 mb-5 text-white">
 <div class="text-xs uppercase tracking-[0.18em] opacity-80 font-bold">Kirim Pesan</div>
 <div class="text-sm font-semibold mt-1">Kami balas cepat via WhatsApp atau email.</div>
