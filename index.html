@@ -159,6 +159,73 @@
             color: #514535;
             background: #fff;
         }
+        .testimonial-section {
+            background:
+                radial-gradient(circle at top left, rgba(245, 176, 65, 0.12), transparent 28%),
+                linear-gradient(180deg, #faf8f4 0%, #ffffff 48%, #f9f6ef 100%);
+        }
+        .testimonial-shell {
+            position: relative;
+            overflow: hidden;
+            border-radius: 2rem;
+            border: 1px solid rgba(129, 85, 0, 0.12);
+            background: rgba(255, 255, 255, 0.88);
+            box-shadow: 0 22px 60px rgba(15, 23, 42, 0.08);
+            backdrop-filter: blur(10px);
+        }
+        .testimonial-track {
+            display: grid;
+            grid-auto-flow: column;
+            grid-auto-columns: minmax(280px, 1fr);
+            gap: 1rem;
+            overflow-x: auto;
+            padding-bottom: 0.25rem;
+            scroll-snap-type: x mandatory;
+            scrollbar-width: none;
+        }
+        .testimonial-track::-webkit-scrollbar {
+            display: none;
+        }
+        .testimonial-slide {
+            scroll-snap-align: start;
+        }
+        .testimonial-card {
+            height: 100%;
+            border-radius: 1.25rem;
+            border: 1px solid rgba(129, 85, 0, 0.12);
+            background: #ffffff;
+            box-shadow: 0 10px 22px rgba(15, 23, 42, 0.06);
+        }
+        .testimonial-avatar {
+            width: 2.75rem;
+            height: 2.75rem;
+            border-radius: 9999px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            font-size: 0.95rem;
+            font-weight: 700;
+            flex-shrink: 0;
+            box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.18);
+        }
+        .testimonial-nav-btn {
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 9999px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(129, 85, 0, 0.16);
+            background: #ffffff;
+            color: #815500;
+            box-shadow: 0 8px 18px rgba(15, 23, 42, 0.08);
+            transition: transform 0.2s ease, background-color 0.2s ease;
+        }
+        .testimonial-nav-btn:hover {
+            transform: translateY(-1px);
+            background: #fdf6e9;
+        }
         .contact-form-column {
             width: 100%;
         }
@@ -217,6 +284,7 @@
 <a class="nav-link font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#rental-options">Rental Options</a>
 <a class="nav-link font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#capacity">Capacity</a>
 <a class="nav-link font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#gallery">Gallery</a>
+<a class="nav-link font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#testimonials">Testimoni</a>
 <a class="nav-link font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#about">About Us</a>
 </div>
 <div class="flex items-center gap-4">
@@ -235,6 +303,7 @@
 <a class="nav-link text-on-surface font-bold" href="#rental-options">Rental Options</a>
 <a class="nav-link text-on-surface font-bold" href="#capacity">Capacity</a>
 <a class="nav-link text-on-surface font-bold" href="#gallery">Gallery</a>
+<a class="nav-link text-on-surface font-bold" href="#testimonials">Testimoni</a>
 <a class="nav-link text-on-surface font-bold" href="#about">About Us</a>
 <a class="inline-flex items-center justify-center gap-2 bg-primary-container text-on-primary-container px-5 py-3 rounded-xl font-bold shadow-sm" href="https://wa.me/6281369368231">
 <span class="material-symbols-outlined" data-icon="phone">phone</span>
@@ -543,6 +612,139 @@
 </div>
 </div>
 </section>
+<!-- Testimonials Section -->
+<section class="py-20 md:py-24 testimonial-section reveal" id="testimonials">
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="text-center mb-10 md:mb-12">
+<div class="inline-flex items-center gap-2 rounded-full border border-outline-variant bg-white px-4 py-1 text-xs font-bold uppercase tracking-[0.18em] text-primary shadow-sm mx-auto">
+<span class="material-symbols-outlined text-sm">reviews</span>
+Testimonial
+</div>
+<h2 class="mt-5 font-headline-lg text-headline-lg text-on-surface">What our customers say</h2>
+<p class="mt-3 text-on-surface-variant max-w-2xl mx-auto">Ulasan pelanggan kami dibuat lebih rapi dengan avatar default berbasis inisial, bintang 5 penuh, dan tampilan slider yang ringan.</p>
+</div>
+<div class="testimonial-shell p-4 md:p-6">
+<div class="flex items-center justify-end gap-3 mb-4">
+<button class="testimonial-nav-btn" id="testimonial-prev" type="button" aria-label="Lihat testimonial sebelumnya">
+<span class="material-symbols-outlined text-base">arrow_back</span>
+</button>
+<button class="testimonial-nav-btn" id="testimonial-next" type="button" aria-label="Lihat testimonial berikutnya">
+<span class="material-symbols-outlined text-base">arrow_forward</span>
+</button>
+</div>
+<div class="testimonial-track" id="testimonial-track">
+<article class="testimonial-card p-5 testimonial-slide">
+<div class="flex items-start gap-3 mb-4">
+<div class="testimonial-avatar bg-[#2F6CB7]">H</div>
+<div>
+<div class="font-bold text-on-surface">Hanafi Risman</div>
+<div class="text-xs text-on-surface-variant">2 reviews</div>
+</div>
+</div>
+<div class="flex items-center gap-1 text-[#E9B44C] mb-3">
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+</div>
+<div class="text-xs font-semibold text-on-surface-variant mb-2">2 years ago</div>
+<p class="text-sm leading-relaxed text-on-surface-variant">The service is quite good, and the team is quick to respond to any issues encountered in the field. Awesome.</p>
+</article>
+<article class="testimonial-card p-5 testimonial-slide">
+<div class="flex items-start gap-3 mb-4">
+<div class="testimonial-avatar bg-[#13A4A4]">M</div>
+<div>
+<div class="font-bold text-on-surface">Mustofa Tofa</div>
+<div class="text-xs text-on-surface-variant">Local customer</div>
+</div>
+</div>
+<div class="flex items-center gap-1 text-[#E9B44C] mb-3">
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+</div>
+<div class="text-xs font-semibold text-on-surface-variant mb-2">9 hours ago</div>
+<p class="text-sm leading-relaxed text-on-surface-variant">Rent a forklift that is reliable and good.</p>
+</article>
+<article class="testimonial-card p-5 testimonial-slide">
+<div class="flex items-start gap-3 mb-4">
+<div class="testimonial-avatar bg-[#E56A2D]">O</div>
+<div>
+<div class="font-bold text-on-surface">Okti Parno</div>
+<div class="text-xs text-on-surface-variant">Local customer</div>
+</div>
+</div>
+<div class="flex items-center gap-1 text-[#E9B44C] mb-3">
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+</div>
+<div class="text-xs font-semibold text-on-surface-variant mb-2">9 hours ago</div>
+<p class="text-sm leading-relaxed text-on-surface-variant">Rent reliable and safe heavy equipment.</p>
+</article>
+<article class="testimonial-card p-5 testimonial-slide">
+<div class="flex items-start gap-3 mb-4">
+<div class="testimonial-avatar bg-[#D97706]">A</div>
+<div>
+<div class="font-bold text-on-surface">Anggi Siregar</div>
+<div class="text-xs text-on-surface-variant">Local customer</div>
+</div>
+</div>
+<div class="flex items-center gap-1 text-[#E9B44C] mb-3">
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+</div>
+<div class="text-xs font-semibold text-on-surface-variant mb-2">9 hours ago</div>
+<p class="text-sm leading-relaxed text-on-surface-variant">Cheap, safe, reliable forklift rental that is definitely trusted in Lampung.</p>
+</article>
+<article class="testimonial-card p-5 testimonial-slide">
+<div class="flex items-start gap-3 mb-4">
+<div class="testimonial-avatar bg-[#0E7490]">S</div>
+<div>
+<div class="font-bold text-on-surface">Suhaili</div>
+<div class="text-xs text-on-surface-variant">Local Guide</div>
+</div>
+</div>
+<div class="flex items-center gap-1 text-[#E9B44C] mb-3">
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+</div>
+<div class="text-xs font-semibold text-on-surface-variant mb-2">10 hours ago</div>
+<p class="text-sm leading-relaxed text-on-surface-variant">Excellent.</p>
+</article>
+<article class="testimonial-card p-5 testimonial-slide">
+<div class="flex items-start gap-3 mb-4">
+<div class="testimonial-avatar bg-[#7C3AED]">M</div>
+<div>
+<div class="font-bold text-on-surface">Ma Suroto</div>
+<div class="text-xs text-on-surface-variant">2 reviews</div>
+</div>
+</div>
+<div class="flex items-center gap-1 text-[#E9B44C] mb-3">
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+</div>
+<div class="text-xs font-semibold text-on-surface-variant mb-2">a year ago</div>
+<p class="text-sm leading-relaxed text-on-surface-variant">Reliable and easy to work with.</p>
+</article>
+</div>
+</div>
+</div>
+</section>
 <div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
 <div class="h-px bg-gradient-to-r from-transparent via-outline-variant to-transparent"></div>
 </div>
@@ -764,6 +966,23 @@ Arahkan Saya
                 galleryToggle.innerHTML = isHidden
                     ? '<span class="material-symbols-outlined" data-icon="expand_less">expand_less</span>Tutup Galeri Tambahan'
                     : '<span class="material-symbols-outlined" data-icon="photo_library">photo_library</span>Lihat Gambar Selengkapnya';
+            });
+        }
+
+        const testimonialTrack = document.getElementById("testimonial-track");
+        const testimonialPrev = document.getElementById("testimonial-prev");
+        const testimonialNext = document.getElementById("testimonial-next");
+        if (testimonialTrack && testimonialPrev && testimonialNext) {
+            const slideAmount = function() {
+                return Math.max(320, Math.floor(testimonialTrack.clientWidth * 0.85));
+            };
+
+            testimonialPrev.addEventListener("click", function() {
+                testimonialTrack.scrollBy({ left: -slideAmount(), behavior: "smooth" });
+            });
+
+            testimonialNext.addEventListener("click", function() {
+                testimonialTrack.scrollBy({ left: slideAmount(), behavior: "smooth" });
             });
         }
 
