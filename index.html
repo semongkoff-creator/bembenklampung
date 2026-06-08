@@ -183,6 +183,22 @@
                 min-height: 0;
             }
         }
+        .contact-input {
+            width: 100%;
+            border-radius: 0.5rem;
+            border: 1px solid rgba(211, 180, 138, 0.95);
+            background: #faf9f6;
+            padding: 0.45rem 0.75rem;
+            font-size: 0.95rem;
+            line-height: 1.25rem;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+        }
+        .contact-input:focus {
+            outline: none;
+            border-color: #815500;
+            box-shadow: 0 0 0 3px rgba(129, 85, 0, 0.08);
+            background: #fff;
+        }
     </style>
 </head>
 <body class="bg-background text-on-background font-body-md overflow-x-hidden">
@@ -613,9 +629,9 @@ Arahkan Saya
 <input name="_captcha" type="hidden" value="false"/>
 <input name="_template" type="hidden" value="table"/>
 <input name="_next" type="hidden" value="https://bembenkporkliflampungcom.vercel.app/success.html"/>
-<input class="w-full p-3 rounded-lg bg-surface-container-low border-2 border-outline-variant focus:border-primary outline-none transition-colors" name="nama" placeholder="Nama Lengkap" required="" type="text"/>
-<input class="w-full p-3 rounded-lg bg-surface-container-low border-2 border-outline-variant focus:border-primary outline-none transition-colors" name="email" placeholder="Alamat Email" required="" type="email"/>
-<textarea class="w-full p-3 rounded-lg bg-surface-container-low border-2 border-outline-variant focus:border-primary outline-none transition-colors" name="pesan" placeholder="Pesan Anda" required="" rows="3"></textarea>
+<input class="contact-input" name="nama" placeholder="Nama Lengkap" required="" type="text"/>
+<input class="contact-input" name="email" placeholder="Alamat Email" required="" type="email"/>
+<textarea class="contact-input" name="pesan" placeholder="Pesan Anda" required="" rows="4"></textarea>
 <button class="w-full bg-primary text-white py-3 rounded-lg font-bold hover:bg-primary-container hover:text-on-primary-container transition-colors shadow-sm" type="submit">KIRIM PESAN</button>
 </form>
 </div>
