@@ -1,0 +1,15 @@
+{
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "bembenkporkliflampungcom.vercel.app"
+        }
+      ],
+      "destination": "https://www.bembenkforklif.com/:path*",
+      "permanent": true
+    }
+  ]
+}
